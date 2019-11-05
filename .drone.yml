@@ -31,7 +31,6 @@ steps:
     - refs/tags/*
     event:
     - tag
-    - push
 
 volumes:
 - name: docker
