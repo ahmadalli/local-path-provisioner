@@ -26,8 +26,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    instance:
-    - drone-publish.rancher.io
     ref:
     - refs/head/master
     - refs/tags/*
@@ -67,8 +65,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    instance:
-    - drone-publish.rancher.io
     ref:
     - refs/head/master
     - refs/tags/*
@@ -108,8 +104,6 @@ steps:
     username:
       from_secret: docker_username
   when:
-    instance:
-    - drone-publish.rancher.io
     ref:
     - refs/head/master
     - refs/tags/*
@@ -144,8 +138,6 @@ steps:
     target: "rancher/local-path-provisioner:${DRONE_TAG}"
     template: "rancher/local-path-provisioner:${DRONE_TAG}-ARCH"
   when:
-    instance:
-    - drone-publish.rancher.io
     ref:
     - refs/head/master
     - refs/tags/*
