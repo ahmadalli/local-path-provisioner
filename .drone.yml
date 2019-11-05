@@ -25,6 +25,13 @@ steps:
     tag: "${DRONE_TAG}-amd64"
     username:
       from_secret: docker_username
+  when:
+    ref:
+    - refs/head/master
+    - refs/tags/*
+    event:
+    - tag
+    - push
 
 volumes:
 - name: docker
