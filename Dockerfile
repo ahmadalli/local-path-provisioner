@@ -1,4 +1,4 @@
-FROM golang:alpine as build
+FROM golang:1.12.1-alpine3.9 as build
 WORKDIR /go
 ADD . /go
 RUN CGO_ENABLED=0 go build -ldflags "-X main.VERSION=v0.0.12 -extldflags -static -s -w" -o /local-path-provisioner
